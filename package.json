@@ -1,0 +1,23 @@
+{
+  "name": "librarvore-node",
+  "version": "1.0.0",
+  "description": "Librarvore — livraria virtual em Node.js + Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:domain": "set PORT=80 && node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^4.22.3",
+    "express-session": "^1.19.0",
+    "multer": "^2.5.0",
+    "mysql2": "^3.24.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
