@@ -12,8 +12,12 @@ const pool = mysql.createPool({
     timezone: 'Z',
     ssl: {
         minVersion: 'TLSv1.2',
-        rejectUnauthorized: true
+        rejectUnauthorized: false
     }
 });
+
+pool.query('SELECT 1')
+    .then(() => console.log('✅ Conexão TiDB OK (TLS)'))
+    .catch(e => console.error('❌ Conexão TiDB falhou:', e.message));
 
 module.exports = pool;
